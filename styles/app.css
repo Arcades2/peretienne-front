@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl font-bold
+  }
+
+  h2 {
+    @apply text-4xl
+  }
+
+  h3 {
+    @apply text-3xl
+  }
+
+  h4 {
+    @apply text-2xl
+  }
+
+  h5 {
+    @apply text-xl
+  }
+
+  h6 {
+    @apply text-base
+  }
+  
+  a, .prose a {
+    @apply text-rose-300
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #14b8a6 #0f172a;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #14b8a6;
+    border-radius: 4px;
+    border: 0px none #ffffff;
+  }
+
+pre {
+  padding: 0 !important
+}
