@@ -30,5 +30,8 @@ module.exports = {
     /^vfile.*/,
     /^axios.*/,
     /^is-plain-obj.*/,
+    /^html-void-elements.*/,
+    /^web-namespaces.*/,
+    /^zwitch.*/,
   ],
 };

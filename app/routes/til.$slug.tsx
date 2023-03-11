@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import axios from 'lib/axios';
 import TagList from '~/components/TagList';
+import rehypeRaw from 'rehype-raw';
 
 export const loader = async ({ params }: LoaderArgs) => {
   const postRes = await axios.get('/posts', {
@@ -66,7 +67,8 @@ function PostPage() {
       {!!post.attributes.tags.length && <TagList tags={post.attributes.tags} />}
       <div className="h-1 w-4/5 bg-rose-300 mx-auto my-8" />
       <ReactMarkdown
-        rehypePlugins={[rehypeHighlight]}
+        rehypePlugins={[rehypeHighlight, rehypeRaw]}
+        skipHtml={false}
         components={{
           a: TargetBlankLink,
         }}
