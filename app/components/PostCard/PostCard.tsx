@@ -18,7 +18,7 @@ function PostCard({ post }: Props) {
         {dayjs(publishedAt).format('YYYY/MM/DD')} - ⏲️ {readingTime} min read
       </p>
       <p className="text-lg">{subtitle}</p>
-      {post.attributes.tags.length && <TagList tags={post.attributes.tags} />}
+      {!!post.attributes.tags.length && <TagList tags={post.attributes.tags} />}
     </li>
   );
 }

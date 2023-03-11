@@ -63,7 +63,7 @@ function PostPage() {
     <div className="prose md:prose-xl prose-invert">
       <h1>{post.attributes.title}</h1>
       <h2>{post.attributes.subtitle}</h2>
-      {post.attributes.tags.length && <TagList tags={post.attributes.tags} />}
+      {!!post.attributes.tags.length && <TagList tags={post.attributes.tags} />}
       <div className="h-1 w-4/5 bg-rose-300 mx-auto my-8" />
       <ReactMarkdown
         rehypePlugins={[rehypeHighlight]}
